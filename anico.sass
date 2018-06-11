@@ -1,0 +1,198 @@
+// TIP: Don't use hundredths decimal place
+// TIP: Use a value from 0 to -0.5
+$lineweight: 0 // Changing this value from 0 either increases or decreases default line width
+
+body
+	margin: 0
+	background-color: lightgrey
+.anico
+	position: relative
+	transition: all 0.25s ease
+	margin: 25px
+	cursor: pointer
+	display: inline-block // CANNOT BE INLINE
+	font-size: 10px // DEFAULT ICON SIZE, CHANGE TO SUIT YOUR NEEDS
+	width: 3.6em !important
+	height: 3.6em !important
+	padding: 0 !important // DO NOT ADD PADDING TO ICONS
+	&::before, &::after
+		position: absolute
+		transition: all 0.25s ease
+		background-color: black
+
+.anico.play
+	height: 3.6em
+	width: 3.6em
+	overflow: hidden
+	&::before
+		content: ''
+		display: block
+		top: 0
+		left: 0.3em
+		width: 1em
+		border-left: 1em solid black
+		border-bottom: 0em solid transparent
+		border-top: 0em solid transparent
+		height: 3.6em
+		background-color: transparent
+	&::after
+		content: ''
+		display: block
+		right: 0.3em
+		height: 3.6em
+		width: 1em
+		top: 0
+	&.toggle
+		&::before
+			width: 0
+			height: 0
+			border-bottom: 1.8em solid transparent
+			border-top: 1.8em solid transparent
+			border-left: 3em solid black
+			padding-right: 0.5em
+		&::after
+			top: 1.8em
+			height: 0
+
+.anico.menu
+	height: 3.6em
+	width: 3.6em
+	background-image: linear-gradient(to bottom, transparent (1.5em -$lineweight/2), black (1.5em -$lineweight/2), black (2.1em + $lineweight/2), transparent (1.4em + $lineweight/2))
+	background-repeat: no-repeat
+	background-color: red
+	&::before
+		content: ''
+		display: block
+		height: 0.6em + $lineweight
+		width: 3.6em
+		top: 0.3em - $lineweight
+		left: 0
+	&::after
+		content: ''
+		display: block
+		height: 0.6em + $lineweight
+		width: 3.6em
+		bottom: 0.3em - $lineweight
+		left: 0
+
+
+
+.anico.menu.close
+	&.toggle
+		background-position: 3.6em 0
+		&::before
+			transform: rotate(45deg)
+			top: 1.5em - $lineweight/2
+		&::after
+			transform: rotate(-45deg)
+			bottom: 1.5em - $lineweight/2
+	
+.anico.menu.minus
+	&.toggle
+		&::before
+			top: 1.5em - $lineweight/2
+		&::after
+			bottom: 1.5em - $lineweight/2
+	
+.anico.menu.arrow
+	&.toggle
+		background-position: -0.35em 0
+		&::before
+			top: 1.08em// - $lineweight/2
+			width: 1.8em// + $lineweight
+			left: 1.85em// - $lineweight
+			border-radius: 0 .1em .1em 0
+			transform: rotate(45deg)
+		&::after
+			bottom: 1.08em// - $lineweight/2
+			width: 1.8em// + $lineweight
+			left: 1.85em// - $lineweight
+			border-radius: 0 .1em .1em 0
+			transform: rotate(-45deg)
+	&.left
+		transform: rotate(180deg)
+
+.anico.menu.chevr
+	&.toggle
+		background-position: -3.7em
+		&::before
+			width: 2.1em - $lineweight/2
+			top: 0.95em// - $lineweight
+			left: 0.9em
+			border-radius: 0 .1em .1em 0
+			transform: rotate(45deg)
+		&::after
+			width: 2.1em - $lineweight/2
+			bottom: 0.95em
+			left: 0.9em
+			border-radius: 0 .1em .1em 0
+			transform: rotate(-45deg)
+		&.left
+			transform: rotate(180deg)
+	&.left
+		transform: rotate(180deg)
+	
+.anico.chevr.horiz
+	height: 3.6em
+	width: 3.6em
+	background: red
+	&.thin
+		$lineweight: -0.4
+	&::before
+		content: ''
+		display: block
+		width: 2.1em - $lineweight/2
+		top: 0.95em
+		left: 0.75em
+		transform: rotate(45deg)
+		height: 0.6em + $lineweight
+		border-radius: 0 .1em .1em 0
+	&::after
+		content: ''
+		display: block
+		width: 2.1em - $lineweight/2
+		bottom: 0.95em
+		left: 0.75em
+		transform: rotate(-45deg)
+		height: 0.6em + $lineweight
+		border-radius: 0 .1em .1em 0
+		
+	&.toggle
+		&::before
+			content: ''
+			display: block
+			transform: rotate(135deg)
+			
+		&::after
+			content: ''
+			display: block
+			transform: rotate(-135deg)
+			
+
+.anico.chevr.verti
+	content: ''
+	display: block
+
+
+.ani-dynamic
+	$duration: 0.5s
+	overflow: hidden
+	position: relative
+	transition: color $duration ease
+	user-select: none
+	cursor: pointer
+	span
+		z-index: 100
+		position: relative
+	.bg
+		padding: 0
+		margin: 0
+		position: absolute
+		border-radius: 50%
+		transition: opacity $duration ease, width 0s ease $duration, height 0s ease $duration
+		width: 0
+		height: inherit
+		transform: translate(-50%,-50%)
+	&:active
+		.bg
+			transition: width $duration ease, height $duration ease, opacity 0s
