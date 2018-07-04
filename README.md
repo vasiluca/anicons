@@ -1,19 +1,25 @@
 # Anicons Library (BETA)
 Import and use animated icons on your website! These animated icons are inspired by Google's Material Design.
 
-You'll find all the information you need to quickly use animated icons here.
+You'll find a lot of examples on how to use Anicons in this [folder](./DEMO).
 
-### Importing anicons into your website:
+## How to use Anicons:
+1. The best way to use the Anicons library is by importing it in your sass file:
 ```
-<link href="link/to/anicons.css" rel="stylesheet" type="text/css">
+@import link/to/anicons.sass
 
-<script src="link/to/jquery"></script> <!-- Import jQuery before importing anicons.js file -->
-
-<script src="link/to/anicons.js"></script>
+(code for your customized icons)
 ```
+[Like we do here](./DEMO/with-sass/mystyles.sass)
 
-### Using Anicons on your website:
+2. Link to the compiled sass in your html file:
+```
+<link href="link/to/my-customized-icons.css" rel="stylesheet" type="text/css">
+```
+[Like we do here.](./DEMO/with-sass/mypage.html)
+
+3. Add the Anicon(s) into your html file:
 ```
 <i class="anico menu close"></i>
-<i class="anico menu minus"></i>
-<i class="anico menu minus"></i>
+```
+[Like we do here.](./DEMO/with-sass/mypage.html)
