@@ -1,4 +1,4 @@
-# Anicons Library (BETA)
+# Anicons Library
 Import and use animated icons on your website! These animated icons are inspired by Google's Material Design.
 
 You'll find a lot of examples on how to use Anicons in this [folder](./DEMO).
@@ -10,7 +10,12 @@ You'll find a lot of examples on how to use Anicons in this [folder](./DEMO).
 
 (code for your customized icons)
 ```
-
+You can change the icon color and size:
+```
+.myicon
+  +color(green) // Just use the color() mixin!
+  font-size: 8px // Just use the font-size property to change icon size!
+```
 ### 2. Link to the compiled sass in your [html file](DEMO/mypage.html):
 ```
 <link href="link/to/my-customized-icons.css" rel="stylesheet" type="text/css">
@@ -20,7 +25,7 @@ You'll find a lot of examples on how to use Anicons in this [folder](./DEMO).
 ```
 <i class="anico menu close"></i>
 ```
-You can use the s1, s2, s3, s4, s5, or s6 class to change the icon lineweight.
+You can use the s1, s2, s3, s4, s5, or s6 class to change the icon lineweight:
 ```
 <i class="anico menu close s4"></i>
 ```
