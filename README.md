@@ -14,7 +14,7 @@ You can change the icon color and size:
 ```
 .myicon
   +color(green) // Just use the color() mixin!
-  font-size: 8px // Just use the font-size property to change icon size!
+  font-size: 8px // Just use the font-size property!
 ```
 ### 2. Link to the compiled sass in your [html file](DEMO/mypage.html):
 ```
