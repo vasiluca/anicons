@@ -1,7 +1,7 @@
 # Anicons Library
 Import and use animated icons on your website! These animated icons are inspired by Google's Material Design.
 
-You'll find a lot of examples on how to use Anicons in this [folder](./DEMO).
+You'll find a lot of examples on how to customize & use Anicons in this [folder](DEMO).
 
 ## How to use Anicons:
 ### 1. The best way to use the Anicons library is by importing it in your [sass file](DEMO/mystyles.sass):
@@ -31,7 +31,7 @@ You can use the s1, s2, s3, s4, s5, or s6 class to change the icon lineweight:
 ```
 
 ### 4. Add your choice of javascript to toggle the icons in your [javascript file](DEMO/myscripts.js):
-```jquery
+```javascript
 $('.anico').click(function() {
   $(this).toggleClass('toggle');
 });
