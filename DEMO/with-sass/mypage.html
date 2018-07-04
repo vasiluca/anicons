@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anicons Demo</title>
+
+    <!-- Anicons Library imported within preprocessed sass file (mystyles.sass) -->
+    <link rel="stylesheet" type="text/css" href="./mystyles.css">
+
+    <!-- Importing jQuery for my script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Using JQuery to add/remove toggle class on icon click -->
+    <script src="./myscript.js"></script>
+  </head>
+  <body>
+    <i class='anico play myclass'></i> <!-- Here I use myclass to give the play button a red color -->
+
+    <i class='anico menu close s1'></i> <!-- Notice how there is no difference in line-weight with or without s1 class -->
+
+    <i class='anico menu arrow'></i> <!-- This is because the global $lineweight is currently set to 1 which is equal to s1 -->
+
+    <i class='anico menu arrow left toggle'></i> <!-- Notice how the toggle class makes the menu toggled by default -->
+
+    <i class='anico menu minus s2'></i>
+
+    <i class='anico menu chevr s3'></i>
+
+    <i class='anico menu chevr left s4'></i>
+
+    <i class='anico chevr verti s5'></i>
+
+    <i class='anico chevr horiz s6'></i>
+  </body>
+</html>

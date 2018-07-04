@@ -1,0 +1,25 @@
+//compileExpanded
+
+@import ../../anicons.sass
+
+// After importing anicons.sass into your sass file... feel free to customize the anicons as you wish!
+
+.anico
+  transition: all 0.15s ease // You can change the transition
+  margin: 15px
+
+.myclass
+  +color(green) // Use the color() mixin on the icon element to change its color
+  font-size: 15px // Use the font-size property to change the icon size
+
+.menu.close.s1
+  &.toggle
+    +color(red)
+
+.menu.chevr.s4
+  &:hover
+    @extend .toggle // You can toggle the element (i.e. on :hover or :active) by extending the toggle class
+
+.anico.chevr.horiz.s6
+  &:hover
+    @extend .s2
