@@ -1,0 +1,702 @@
+/* TIP: Use the s1, s2, s3, s4, s5, and s6 classes
+   where s1 is thickest and s6 is thinnest icon
+	 line-weight.
+
+	 You can change the icon color in your own
+	 sass file (after importing anicons.sass)
+	 using the color() mixin where you specify
+	 the desired icon color as the parameter. */
+.anico {
+	position: relative;
+	transition: all 0.25s ease;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 10px;
+	width: 3.6em !important;
+	height: 3.6em !important;
+	padding: 0 !important;
+}
+
+.anico::before, .anico::after {
+	content: '';
+	display: block;
+	position: absolute;
+	transition: inherit;
+	background-color: black;
+}
+
+.anico.play {
+	height: 3.6em;
+	width: 3.6em;
+	overflow: hidden;
+}
+
+.anico.play::before {
+	border-bottom: 0em solid transparent;
+	border-top: 0em solid transparent;
+	background-color: transparent !important;
+	top: 0em;
+	left: 0.3em;
+	width: 1em;
+	border-left: 1em solid black;
+	height: 3.6em;
+}
+
+.anico.play::after {
+	right: 0.3em;
+	height: 3.6em;
+	width: 1em;
+	top: 0em;
+}
+
+.anico.play.s1::before {
+	top: 0em;
+	left: 0.3em;
+	width: 1em;
+	border-left: 1em solid black;
+	height: 3.6em;
+}
+
+.anico.play.s1::after {
+	right: 0.3em;
+	height: 3.6em;
+	width: 1em;
+	top: 0em;
+}
+
+.anico.play.s2::before, .anico.play.chevr.horiz.s6:hover::before {
+	top: 0.05em;
+	left: 0.4em;
+	width: 0.9em;
+	border-left: 0.9em solid black;
+	height: 3.5em;
+}
+
+.anico.play.s2::after, .anico.play.chevr.horiz.s6:hover::after {
+	right: 0.4em;
+	height: 3.5em;
+	width: 0.9em;
+	top: 0.05em;
+}
+
+.anico.play.s3::before {
+	top: 0.1em;
+	left: 0.5em;
+	width: 0.8em;
+	border-left: 0.8em solid black;
+	height: 3.4em;
+}
+
+.anico.play.s3::after {
+	right: 0.5em;
+	height: 3.4em;
+	width: 0.8em;
+	top: 0.1em;
+}
+
+.anico.play.s4::before {
+	top: 0.15em;
+	left: 0.6em;
+	width: 0.7em;
+	border-left: 0.7em solid black;
+	height: 3.3em;
+}
+
+.anico.play.s4::after {
+	right: 0.6em;
+	height: 3.3em;
+	width: 0.7em;
+	top: 0.15em;
+}
+
+.anico.play.s5::before {
+	top: 0.2em;
+	left: 0.7em;
+	width: 0.6em;
+	border-left: 0.6em solid black;
+	height: 3.2em;
+}
+
+.anico.play.s5::after {
+	right: 0.7em;
+	height: 3.2em;
+	width: 0.6em;
+	top: 0.2em;
+}
+
+.anico.play.s6::before {
+	top: 0.25em;
+	left: 0.8em;
+	width: 0.5em;
+	border-left: 0.5em solid black;
+	height: 3.1em;
+}
+
+.anico.play.s6::after {
+	right: 0.8em;
+	height: 3.1em;
+	width: 0.5em;
+	top: 0.25em;
+}
+
+.anico.play.toggle::before, .anico.play.menu.chevr.s4:hover::before {
+	width: 0;
+	height: 0;
+	border-bottom: 1.8em solid transparent;
+	border-top: 1.8em solid transparent;
+	border-left: 3em solid black;
+}
+
+.anico.play.toggle::after, .anico.play.menu.chevr.s4:hover::after {
+	top: 1.8em;
+	height: 0;
+}
+
+.anico.play.toggle.s1::before, .anico.play.s1.menu.chevr.s4:hover::before {
+	border-bottom: 1.8em solid transparent;
+	border-top: 1.8em solid transparent;
+	border-left: 3em solid black;
+}
+
+.anico.play.toggle.s1::after, .anico.play.s1.menu.chevr.s4:hover::after {
+	top: 1.8em;
+}
+
+.anico.play.toggle.s2::before, .anico.play.s2.menu.chevr.s4:hover::before, .anico.play.menu.chevr.s4.horiz.s6:hover::before, .anico.play.toggle.chevr.horiz.s6:hover::before {
+	border-bottom: 1.75em solid transparent;
+	border-top: 1.75em solid transparent;
+	border-left: 2.85em solid black;
+}
+
+.anico.play.toggle.s2::after, .anico.play.s2.menu.chevr.s4:hover::after, .anico.play.menu.chevr.s4.horiz.s6:hover::after, .anico.play.toggle.chevr.horiz.s6:hover::after {
+	top: 1.85em;
+}
+
+.anico.play.toggle.s3::before, .anico.play.s3.menu.chevr.s4:hover::before {
+	border-bottom: 1.7em solid transparent;
+	border-top: 1.7em solid transparent;
+	border-left: 2.7em solid black;
+}
+
+.anico.play.toggle.s3::after, .anico.play.s3.menu.chevr.s4:hover::after {
+	top: 1.9em;
+}
+
+.anico.play.toggle.s4::before, .anico.play.s4.menu.chevr:hover::before {
+	border-bottom: 1.65em solid transparent;
+	border-top: 1.65em solid transparent;
+	border-left: 2.55em solid black;
+}
+
+.anico.play.toggle.s4::after, .anico.play.s4.menu.chevr:hover::after {
+	top: 1.95em;
+}
+
+.anico.play.toggle.s5::before, .anico.play.s5.menu.chevr.s4:hover::before {
+	border-bottom: 1.6em solid transparent;
+	border-top: 1.6em solid transparent;
+	border-left: 2.4em solid black;
+}
+
+.anico.play.toggle.s5::after, .anico.play.s5.menu.chevr.s4:hover::after {
+	top: 2em;
+}
+
+.anico.play.toggle.s6::before, .anico.play.s6.menu.chevr.s4:hover::before {
+	border-bottom: 1.55em solid transparent;
+	border-top: 1.55em solid transparent;
+	border-left: 2.25em solid black;
+}
+
+.anico.play.toggle.s6::after, .anico.play.s6.menu.chevr.s4:hover::after {
+	top: 2.05em;
+}
+
+.anico.menu {
+	height: 3.6em;
+	width: 3.6em;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to bottom, transparent 1.5em, black 1.5em, black 2.1em, transparent 1.4em);
+}
+
+.anico.menu::before {
+	display: block;
+	width: 3.6em;
+	left: 0;
+	height: 0.6em;
+	top: 0.3em;
+}
+
+.anico.menu::after {
+	display: block;
+	width: 3.6em;
+	left: 0;
+	height: 0.6em;
+	bottom: 0.3em;
+}
+
+.anico.menu.s1 {
+	background-image: linear-gradient(to bottom, transparent 1.5em, black 1.5em, black 2.1em, transparent 1.4em);
+}
+
+.anico.menu.s1::before {
+	height: 0.6em;
+	top: 0.3em;
+}
+
+.anico.menu.s1::after {
+	height: 0.6em;
+	bottom: 0.3em;
+}
+
+.anico.menu.s2, .anico.menu.chevr.horiz.s6:hover {
+	background-image: linear-gradient(to bottom, transparent 1.55em, black 1.55em, black 2.05em, transparent 1.35em);
+}
+
+.anico.menu.s2::before, .anico.menu.chevr.horiz.s6:hover::before {
+	height: 0.5em;
+	top: 0.4em;
+}
+
+.anico.menu.s2::after, .anico.menu.chevr.horiz.s6:hover::after {
+	height: 0.5em;
+	bottom: 0.4em;
+}
+
+.anico.menu.s3 {
+	background-image: linear-gradient(to bottom, transparent 1.6em, black 1.6em, black 2em, transparent 1.3em);
+}
+
+.anico.menu.s3::before {
+	height: 0.4em;
+	top: 0.5em;
+}
+
+.anico.menu.s3::after {
+	height: 0.4em;
+	bottom: 0.5em;
+}
+
+.anico.menu.s4 {
+	background-image: linear-gradient(to bottom, transparent 1.65em, black 1.65em, black 1.95em, transparent 1.25em);
+}
+
+.anico.menu.s4::before {
+	height: 0.3em;
+	top: 0.6em;
+}
+
+.anico.menu.s4::after {
+	height: 0.3em;
+	bottom: 0.6em;
+}
+
+.anico.menu.s5 {
+	background-image: linear-gradient(to bottom, transparent 1.7em, black 1.7em, black 1.9em, transparent 1.2em);
+}
+
+.anico.menu.s5::before {
+	height: 0.2em;
+	top: 0.7em;
+}
+
+.anico.menu.s5::after {
+	height: 0.2em;
+	bottom: 0.7em;
+}
+
+.anico.menu.s6 {
+	background-image: linear-gradient(to bottom, transparent 1.75em, black 1.75em, black 1.85em, transparent 1.15em);
+}
+
+.anico.menu.s6::before {
+	height: 0.1em;
+	top: 0.8em;
+}
+
+.anico.menu.s6::after {
+	height: 0.1em;
+	bottom: 0.8em;
+}
+
+.anico.menu.close.toggle, .anico.menu.close.chevr.s4:hover {
+	background-position: 3.6em 0;
+}
+
+.anico.menu.close.toggle::before, .anico.menu.close.chevr.s4:hover::before {
+	transform: rotate(45deg);
+	top: 1.5em;
+}
+
+.anico.menu.close.toggle::after, .anico.menu.close.chevr.s4:hover::after {
+	transform: rotate(-45deg);
+	bottom: 1.5em;
+}
+
+.anico.menu.close.toggle.s1::before, .anico.menu.close.s1.chevr.s4:hover::before {
+	top: 1.5em;
+}
+
+.anico.menu.close.toggle.s1::after, .anico.menu.close.s1.chevr.s4:hover::after {
+	bottom: 1.5em;
+}
+
+.anico.menu.close.toggle.s2::before, .anico.menu.close.s2.chevr.s4:hover::before, .anico.menu.close.chevr.s4.horiz.s6:hover::before, .anico.menu.close.toggle.chevr.horiz.s6:hover::before {
+	top: 1.55em;
+}
+
+.anico.menu.close.toggle.s2::after, .anico.menu.close.s2.chevr.s4:hover::after, .anico.menu.close.chevr.s4.horiz.s6:hover::after, .anico.menu.close.toggle.chevr.horiz.s6:hover::after {
+	bottom: 1.55em;
+}
+
+.anico.menu.close.toggle.s3::before, .anico.menu.close.s3.chevr.s4:hover::before {
+	top: 1.6em;
+}
+
+.anico.menu.close.toggle.s3::after, .anico.menu.close.s3.chevr.s4:hover::after {
+	bottom: 1.6em;
+}
+
+.anico.menu.close.toggle.s4::before, .anico.menu.close.s4.chevr:hover::before {
+	top: 1.65em;
+}
+
+.anico.menu.close.toggle.s4::after, .anico.menu.close.s4.chevr:hover::after {
+	bottom: 1.65em;
+}
+
+.anico.menu.close.toggle.s5::before, .anico.menu.close.s5.chevr.s4:hover::before {
+	top: 1.7em;
+}
+
+.anico.menu.close.toggle.s5::after, .anico.menu.close.s5.chevr.s4:hover::after {
+	bottom: 1.7em;
+}
+
+.anico.menu.close.toggle.s6::before, .anico.menu.close.s6.chevr.s4:hover::before {
+	top: 1.75em;
+}
+
+.anico.menu.close.toggle.s6::after, .anico.menu.close.s6.chevr.s4:hover::after {
+	bottom: 1.75em;
+}
+
+.anico.menu.minus.toggle::before, .anico.menu.minus.chevr.s4:hover::before {
+	top: 1.5em;
+}
+
+.anico.menu.minus.toggle::after, .anico.menu.minus.chevr.s4:hover::after {
+	bottom: 1.5em;
+}
+
+.anico.menu.minus.toggle.s1::before, .anico.menu.minus.s1.chevr.s4:hover::before {
+	top: 1.5em;
+}
+
+.anico.menu.minus.toggle.s1::after, .anico.menu.minus.s1.chevr.s4:hover::after {
+	bottom: 1.5em;
+}
+
+.anico.menu.minus.toggle.s2::before, .anico.menu.minus.s2.chevr.s4:hover::before, .anico.menu.minus.chevr.s4.horiz.s6:hover::before, .anico.menu.minus.toggle.chevr.horiz.s6:hover::before {
+	top: 1.55em;
+}
+
+.anico.menu.minus.toggle.s2::after, .anico.menu.minus.s2.chevr.s4:hover::after, .anico.menu.minus.chevr.s4.horiz.s6:hover::after, .anico.menu.minus.toggle.chevr.horiz.s6:hover::after {
+	bottom: 1.55em;
+}
+
+.anico.menu.minus.toggle.s3::before, .anico.menu.minus.s3.chevr.s4:hover::before {
+	top: 1.6em;
+}
+
+.anico.menu.minus.toggle.s3::after, .anico.menu.minus.s3.chevr.s4:hover::after {
+	bottom: 1.6em;
+}
+
+.anico.menu.minus.toggle.s4::before, .anico.menu.minus.s4.chevr:hover::before {
+	top: 1.65em;
+}
+
+.anico.menu.minus.toggle.s4::after, .anico.menu.minus.s4.chevr:hover::after {
+	bottom: 1.65em;
+}
+
+.anico.menu.minus.toggle.s5::before, .anico.menu.minus.s5.chevr.s4:hover::before {
+	top: 1.7em;
+}
+
+.anico.menu.minus.toggle.s5::after, .anico.menu.minus.s5.chevr.s4:hover::after {
+	bottom: 1.7em;
+}
+
+.anico.menu.minus.toggle.s6::before, .anico.menu.minus.s6.chevr.s4:hover::before {
+	top: 1.75em;
+}
+
+.anico.menu.minus.toggle.s6::after, .anico.menu.minus.s6.chevr.s4:hover::after {
+	bottom: 1.75em;
+}
+
+.anico.menu.arrow.toggle, .anico.menu.arrow.chevr.s4:hover {
+	background-position: -0.35em 0;
+}
+
+.anico.menu.arrow.toggle::before, .anico.menu.arrow.chevr.s4:hover::before {
+	top: 1.08em;
+	width: 1.8em;
+	left: 1.85em;
+	border-radius: 0 .1em .1em 0;
+	transform: rotate(45deg);
+}
+
+.anico.menu.arrow.toggle::after, .anico.menu.arrow.chevr.s4:hover::after {
+	bottom: 1.08em;
+	width: 1.8em;
+	left: 1.85em;
+	border-radius: 0 .1em .1em 0;
+	transform: rotate(-45deg);
+}
+
+.anico.menu.arrow.left {
+	transform: rotate(180deg);
+}
+
+.anico.menu.chevr.toggle, .anico.menu.chevr.s4:hover {
+	background-position: -3.7em;
+}
+
+.anico.menu.chevr.toggle::before, .anico.menu.chevr.s4:hover::before {
+	top: 0.95em;
+	left: 0.9em;
+	border-radius: 0 .1em .1em 0;
+	transform: rotate(45deg);
+	width: 2.1em;
+}
+
+.anico.menu.chevr.toggle::after, .anico.menu.chevr.s4:hover::after {
+	bottom: 0.95em;
+	left: 0.9em;
+	border-radius: 0 .1em .1em 0;
+	transform: rotate(-45deg);
+	width: 2.1em;
+}
+
+.anico.menu.chevr.toggle.left, .anico.menu.chevr.left.s4:hover {
+	transform: rotate(180deg);
+}
+
+.anico.menu.chevr.toggle.s1::before, .anico.menu.chevr.s1.s4:hover::before {
+	width: 2.1em;
+}
+
+.anico.menu.chevr.toggle.s1::after, .anico.menu.chevr.s1.s4:hover::after {
+	width: 2.1em;
+}
+
+.anico.menu.chevr.toggle.s2::before, .anico.menu.chevr.s2.s4:hover::before, .anico.menu.chevr.s4.horiz.s6:hover::before, .anico.menu.chevr.toggle.horiz.s6:hover::before {
+	width: 2.15em;
+}
+
+.anico.menu.chevr.toggle.s2::after, .anico.menu.chevr.s2.s4:hover::after, .anico.menu.chevr.s4.horiz.s6:hover::after, .anico.menu.chevr.toggle.horiz.s6:hover::after {
+	width: 2.15em;
+}
+
+.anico.menu.chevr.toggle.s3::before, .anico.menu.chevr.s3.s4:hover::before {
+	width: 2.2em;
+}
+
+.anico.menu.chevr.toggle.s3::after, .anico.menu.chevr.s3.s4:hover::after {
+	width: 2.2em;
+}
+
+.anico.menu.chevr.toggle.s4::before, .anico.menu.chevr.s4:hover::before {
+	width: 2.25em;
+}
+
+.anico.menu.chevr.toggle.s4::after, .anico.menu.chevr.s4:hover::after {
+	width: 2.25em;
+}
+
+.anico.menu.chevr.toggle.s5::before, .anico.menu.chevr.s5.s4:hover::before {
+	width: 2.3em;
+}
+
+.anico.menu.chevr.toggle.s5::after, .anico.menu.chevr.s5.s4:hover::after {
+	width: 2.3em;
+}
+
+.anico.menu.chevr.toggle.s6::before, .anico.menu.chevr.s6.s4:hover::before {
+	width: 2.35em;
+}
+
+.anico.menu.chevr.toggle.s6::after, .anico.menu.chevr.s6.s4:hover::after {
+	width: 2.35em;
+}
+
+.anico.menu.chevr.left {
+	transform: rotate(180deg);
+}
+
+.anico.chevr.verti, .anico.chevr.horiz {
+	height: 3.6em;
+	width: 3.6em;
+}
+
+.anico.chevr.verti::before, .anico.chevr.horiz::before {
+	display: block;
+	top: 0.95em;
+	left: 0.75em;
+	transform: rotate(45deg);
+	border-radius: 0 .1em .1em 0;
+	width: 2.1em;
+	height: 0.6em;
+}
+
+.anico.chevr.verti::after, .anico.chevr.horiz::after {
+	display: block;
+	bottom: 0.95em;
+	left: 0.75em;
+	transform: rotate(-45deg);
+	border-radius: 0 .1em .1em 0;
+	width: 2.1em;
+	height: 0.6em;
+}
+
+.anico.chevr.verti.toggle::before, .anico.chevr.verti.menu.s4:hover::before, .anico.chevr.horiz.toggle::before, .anico.chevr.horiz.menu.s4:hover::before {
+	content: '';
+	transform: rotate(135deg);
+}
+
+.anico.chevr.verti.toggle::after, .anico.chevr.verti.menu.s4:hover::after, .anico.chevr.horiz.toggle::after, .anico.chevr.horiz.menu.s4:hover::after {
+	content: '';
+	transform: rotate(-135deg);
+}
+
+.anico.chevr.verti.s1::before, .anico.chevr.horiz.s1::before {
+	width: 2.1em;
+	height: 0.6em;
+}
+
+.anico.chevr.verti.s1::after, .anico.chevr.horiz.s1::after {
+	width: 2.1em;
+	height: 0.6em;
+}
+
+.anico.chevr.verti.s2::before, .anico.chevr.verti.horiz.s6:hover::before, .anico.chevr.horiz.s2::before, .anico.chevr.horiz.s6:hover::before {
+	width: 2.15em;
+	height: 0.5em;
+}
+
+.anico.chevr.verti.s2::after, .anico.chevr.verti.horiz.s6:hover::after, .anico.chevr.horiz.s2::after, .anico.chevr.horiz.s6:hover::after {
+	width: 2.15em;
+	height: 0.5em;
+}
+
+.anico.chevr.verti.s3::before, .anico.chevr.horiz.s3::before {
+	width: 2.2em;
+	height: 0.4em;
+}
+
+.anico.chevr.verti.s3::after, .anico.chevr.horiz.s3::after {
+	width: 2.2em;
+	height: 0.4em;
+}
+
+.anico.chevr.verti.s4::before, .anico.chevr.horiz.s4::before {
+	width: 2.25em;
+	height: 0.3em;
+}
+
+.anico.chevr.verti.s4::after, .anico.chevr.horiz.s4::after {
+	width: 2.25em;
+	height: 0.3em;
+}
+
+.anico.chevr.verti.s5::before, .anico.chevr.horiz.s5::before {
+	width: 2.3em;
+	height: 0.2em;
+}
+
+.anico.chevr.verti.s5::after, .anico.chevr.horiz.s5::after {
+	width: 2.3em;
+	height: 0.2em;
+}
+
+.anico.chevr.verti.s6::before, .anico.chevr.horiz.s6::before {
+	width: 2.35em;
+	height: 0.1em;
+}
+
+.anico.chevr.verti.s6::after, .anico.chevr.horiz.s6::after {
+	width: 2.35em;
+	height: 0.1em;
+}
+
+.anico.chevr.horiz {
+	transform: rotate(270deg);
+}
+
+.anico {
+	transition: all 0.15s ease;
+	margin: 15px;
+}
+
+.myclass {
+	font-size: 15px;
+}
+
+.myclass[class*='menu'].s1 {
+	background-image: linear-gradient(to bottom, transparent 1.55em, green 1.55em, green 2.05em, transparent 1.35em) !important;
+}
+
+.myclass[class*='menu'].s2, .myclass.anico.chevr.horiz.s6[class*='menu']:hover {
+	background-image: linear-gradient(to bottom, transparent 1.6em, green 1.6em, green 2em, transparent 1.3em) !important;
+}
+
+.myclass[class*='menu'].s3 {
+	background-image: linear-gradient(to bottom, transparent 1.65em, green 1.65em, black 1.95em, transparent 1.25em) !important;
+}
+
+.myclass[class*='menu'].s4 {
+	background-image: linear-gradient(to bottom, transparent 1.7em, green 1.7em, green 1.9em, transparent 1.2em) !important;
+}
+
+.myclass[class*='menu'].s5 {
+	background-image: linear-gradient(to bottom, transparent 1.75em, green 1.75em, green 1.85em, transparent 1.15em) !important;
+}
+
+.myclass::before, .myclass::after {
+	background-color: green !important;
+}
+
+.myclass[class*='play']::before {
+	border-left-color: green !important;
+}
+
+.menu.close.s1.toggle[class*='menu'].s1, .menu.close.s1.chevr.s4[class*='menu'].s1:hover {
+	background-image: linear-gradient(to bottom, transparent 1.55em, red 1.55em, red 2.05em, transparent 1.35em) !important;
+}
+
+.menu.close.s1.toggle[class*='menu'].s2, .menu.close.s1.chevr.s4[class*='menu'].s2:hover, .menu.close.s1.chevr.s4.anico.horiz.s6[class*='menu']:hover, .menu.close.s1.toggle.anico.chevr.horiz.s6[class*='menu']:hover {
+	background-image: linear-gradient(to bottom, transparent 1.6em, red 1.6em, red 2em, transparent 1.3em) !important;
+}
+
+.menu.close.s1.toggle[class*='menu'].s3, .menu.close.s1.chevr.s4[class*='menu'].s3:hover {
+	background-image: linear-gradient(to bottom, transparent 1.65em, red 1.65em, black 1.95em, transparent 1.25em) !important;
+}
+
+.menu.close.s1.toggle[class*='menu'].s4, .menu.close.s1.chevr[class*='menu'].s4:hover {
+	background-image: linear-gradient(to bottom, transparent 1.7em, red 1.7em, red 1.9em, transparent 1.2em) !important;
+}
+
+.menu.close.s1.toggle[class*='menu'].s5, .menu.close.s1.chevr.s4[class*='menu'].s5:hover {
+	background-image: linear-gradient(to bottom, transparent 1.75em, red 1.75em, red 1.85em, transparent 1.15em) !important;
+}
+
+.menu.close.s1.toggle::before, .menu.close.s1.chevr.s4:hover::before, .menu.close.s1.toggle::after, .menu.close.s1.chevr.s4:hover::after {
+	background-color: red !important;
+}
+
+.menu.close.s1.toggle[class*='play']::before, .menu.close.s1.chevr.s4:hover[class*='play']::before {
+	border-left-color: red !important;
+}
