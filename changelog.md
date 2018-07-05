@@ -1,5 +1,5 @@
 # Release
-- ## ** v1.0 **
+- ## v1.0
   - Includes 6 Icon Types:
     - Play / Pause
     - Menu / Close
